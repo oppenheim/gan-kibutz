@@ -237,18 +237,23 @@ ul  { list-style: none; }
   line-height: 1.6;
 }
 .principles__values {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
   gap: 0.5rem;
   margin-top: 1rem;
 }
 .principles__values span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--gray-bg);
   color: var(--navy);
   font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--radius-full);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
 }
 
 /* Kindergartens card — lower-right */
