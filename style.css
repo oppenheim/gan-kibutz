@@ -133,18 +133,90 @@ ul  { list-style: none; }
 /* ── Hero ── */
 .hero {
   position: relative;
-  height: calc(100vh - var(--nav-h));
-  min-height: 500px;
+  min-height: calc(100vh - var(--nav-h));
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.25rem;
+  overflow: hidden;
 }
 
 .hero__photo {
   position: absolute;
   inset: 0;
-  background-image: url('assets/hero.jpg');
+  background-image: url('assets/hero-kids.jpg');
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 35%;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(19,22,96,0.55) 0%, rgba(19,22,96,0.35) 40%, rgba(19,22,96,0.75) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__logo {
+  width: clamp(96px, 16vw, 150px);
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+  margin-bottom: 1.5rem;
+}
+
+.hero__title {
+  color: var(--white);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+
+.hero__subtitle {
+  color: var(--white);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 3.5vw, 1.5rem);
+  margin: 0.6rem 0 0;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.4);
+}
+
+.hero__lead {
+  color: rgba(255,255,255,0.92);
+  font-size: clamp(0.98rem, 2.6vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 36ch;
+  margin: 1.1rem 0 0;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.hero__cta {
+  font-size: 1.1rem;
+  padding: 0.9rem 1.75rem;
+}
+
+@media (max-width: 600px) {
+  .hero__actions { width: 100%; }
+  .hero__cta { width: 100%; text-align: center; }
 }
 
 
